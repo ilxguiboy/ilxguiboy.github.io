@@ -5,283 +5,261 @@
 <title>Aprender Brincando</title>
 
 <style>
-  /* ===== ESTILO SIMPLES ===== */
   body {
     font-family: Arial, sans-serif;
-    background: #FFF8EC;
+    background-color: #fff09b;
     color: #4A3B52;
     padding: 20px;
-    max-width: 700px;
-    margin: auto;
   }
 
   h1, h2 {
     text-align: center;
   }
 
-  /* Espaço pra foto principal */
-  .foto-topo {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 20px;
-    background: #FFD6D6;
-    border: 3px dashed #ccc;
-    border-radius: 50%;
+  .foto {
+    width: 140px;
+    height: 140px;
+    background-color: #ffd6d6;
+    border: 2px dashed gray;
+    border-radius: 100px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    color: #888;
-    font-size: 14px;
+    text-align: center;
+    color: gray;
+  }
+
+  .texto-centro {
     text-align: center;
   }
 
-  .foto-topo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Níveis */
   .niveis {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin: 20px 0;
+    text-align: center;
+    margin-top: 20px;
   }
 
   .nivel {
-    background: white;
-    border: 3px solid #ccc;
-    border-radius: 15px;
-    padding: 15px;
-    width: 180px;
-    text-align: center;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 8px;
+    width: 170px;
     cursor: pointer;
-    font-family: inherit;
-    font-size: 16px;
-    color: #4A3B52;
+    display: inline-block;
   }
 
-  .nivel.ativo {
-    background: #FFE9A8;
-    border-color: #E0C870;
+  .ativo {
+    background-color: #ffe7a3;
+    border-color: orange;
   }
 
-  /* Espaço pra foto do nível */
   .foto-nivel {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 10px;
-    background: #eee;
+    width: 70px;
+    height: 70px;
+    background-color: #eeeeee;
     border-radius: 50%;
+    margin: auto;
+    margin-bottom: 8px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #888;
-    font-size: 12px;
   }
 
   .foto-nivel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Cartões de conteúdo */
-  .cartao {
-    background: white;
-    border: 2px solid #eee;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px 0;
-  }
-
-  /* Lista tabuada */
-  ul.lista {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 8px;
-  }
-
-  ul.lista li {
-    background: #FFF8EC;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-  /* Palavras */
-  .palavras {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-  }
-
-  .palavras li {
-    background: #FFF8EC;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-  /* Espaço pra foto da palavra */
-  .foto-palavra {
     width: 70px;
     height: 70px;
-    margin: 0 auto 5px;
-    background: #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
   }
 
-  .foto-palavra img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .caixa {
+    background-color: white;
+    border: 2px solid #dddddd;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 25px;
   }
 
   select {
-    padding: 8px;
+    padding: 7px;
     font-size: 16px;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    background-color: #fff8ec;
+    margin: 6px;
+    padding: 10px;
     border-radius: 8px;
-    border: 2px solid #ccc;
+    text-align: center;
+  }
+
+  .lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .palavras {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .emoji {
+    font-size: 35px;
   }
 </style>
 </head>
 
 <body>
 
-<!-- ===== FOTO PRINCIPAL ===== -->
-<div class="foto-topo">
-  <!-- 👇 Troque o src pela sua foto -->
-  <img src="" alt="Foto principal" onerror="this.style.display='none'">
-  <span>Coloque<br>sua foto<br>aqui</span>
+<div class="foto">
+  Colocar<br>foto aqui
 </div>
 
 <h1>Aprender Brincando</h1>
-<p style="text-align:center;">Tabuada e escrita, do jeito simples 💛</p>
 
-<!-- ===== NÍVEIS ===== -->
-<p style="text-align:center; font-weight:bold;">Qual é a sua hora?</p>
+<p class="texto-centro">
+  Atividade de tabuada e escrita
+</p>
+
+<p class="texto-centro">
+  Escolha o nível:
+</p>
 
 <div class="niveis">
 
-  <!-- Nível 1 -->
-  <button class="nivel ativo" onclick="trocarNivel(this, 'facil')">
+  <button class="nivel ativo" onclick="mudarNivel(this, 'facil')">
     <div class="foto-nivel">
-      <!-- 👇 Coloque a foto do nível 1 -->
-      <img src="Joaninha-Joaninha-nível-1.jpg" alt=""C:\Users\ilxgu\Downloads\ilxguiboy.github.io-main\ilxguiboy.github.io-main\Joaninha-Joaninha-nível-1.jpg"" ...>
+      <img src="Joaninha-Joaninha-nível-1.jpg">
     </div>
-    <strong>😊 Tô começando</strong>
+    😊 Tô começando
   </button>
 
-  <!-- Nível 2 -->
-  <button class="nivel" onclick="trocarNivel(this, 'medio')">
+  <button class="nivel" onclick="mudarNivel(this, 'medio')">
     <div class="foto-nivel">
-      <!-- 👇 Coloque a foto do nível 2 -->
-      <img src="Joaninha-Joaninha-nível-2.jpg" alt=""""C:\Users\ilxgu\Downloads\ilxguiboy.github.io-main\ilxguiboy.github.io-main\Joaninha-Joaninha-nível-2.jpg.jpg"""" ...>
+      <img src="Joaninha-Joaninha-nível-2.jpg">
     </div>
-    <strong>🙂 Já sei um pouco</strong>
+    🙂 Já sei um pouco
   </button>
 
-  <!-- Nível 3 -->
-  <button class="nivel" onclick="trocarNivel(this, 'dificil')">
+  <button class="nivel" onclick="mudarNivel(this, 'dificil')">
     <div class="foto-nivel">
-      <!-- 👇 Coloque a foto do nível 3 -->
-     <img src="Joaninha-Joaninha-nível-3.jpg" alt="""""C:\Users\ilxgu\Downloads\ilxguiboy.github.io-main\ilxguiboy.github.io-main\Joaninha-Joaninha-nível-3.jpg""""" ...>
+      <img src="Joaninha-Joaninha-nível-3.jpg">
     </div>
-    <strong>😎 Já sou fera</strong>
+    😎 Já sou fera
   </button>
 
 </div>
 
-<!-- ===== TABUADA ===== -->
-<div class="cartao">
-  <h2>🔢 Tabuada</h2>
+<div class="caixa">
+  <h2>Tabuada</h2>
+
   <p>Escolha um número:</p>
+
   <select id="numero" onchange="mostrarTabuada()"></select>
+
   <ul class="lista" id="lista"></ul>
 </div>
 
-<!-- ===== ESCRITA ===== -->
-<div class="cartao">
-  <h2>✍️ Escrita</h2>
-  <p>Palavras pra praticar:</p>
+<div class="caixa">
+  <h2>Escrita</h2>
+
+  <p>Palavras para treinar:</p>
+
   <ul class="palavras" id="palavras"></ul>
 </div>
 
 <script>
-  // Nível atual
-  var nivel = 'facil';
+  var nivel = "facil";
 
-  // Palavras de cada nível
-  var palavras = {
-    facil:   [['gato','🐱'], ['casa','🏠'], ['sol','☀️'], ['lua','🌙']],
-    medio:   [['cachorro','🐶'], ['escola','🏫'], ['sorvete','🍦'], ['girafa','🦒']],
-    dificil: [['aquarela','🎨'], ['biblioteca','📚'], ['astronauta','👨‍🚀']]
-  };
+  var palavrasFacil = [
+    ["gato", "🐱"],
+    ["casa", "🏠"],
+    ["sol", "☀️"],
+    ["lua", "🌙"]
+  ];
 
-  // Até quanto vai a tabuada
-  var ate = { facil: 5, medio: 10, dificil: 12 };
+  var palavrasMedio = [
+    ["cachorro", "🐶"],
+    ["escola", "🏫"],
+    ["sorvete", "🍦"],
+    ["girafa", "🦒"]
+  ];
 
-  // Trocar nível
-  function trocarNivel(botao, novoNivel) {
-    var todos = document.querySelectorAll('.nivel');
-    for (var i = 0; i < todos.length; i++) todos[i].classList.remove('ativo');
-    botao.classList.add('ativo');
+  var palavrasDificil = [
+    ["aquarela", "🎨"],
+    ["biblioteca", "📚"],
+    ["astronauta", "👨‍🚀"]
+  ];
+
+  function mudarNivel(botao, novoNivel) {
+    var botoes = document.querySelectorAll(".nivel");
+
+    for (var i = 0; i < botoes.length; i++) {
+      botoes[i].classList.remove("ativo");
+    }
+
+    botao.classList.add("ativo");
     nivel = novoNivel;
-    preencherSelect();
+
     mostrarTabuada();
     mostrarPalavras();
   }
 
-  // Preencher seletor de números
-  function preencherSelect() {
-    var sel = document.getElementById('numero');
-    sel.innerHTML = '';
+  function colocarNumeros() {
+    var numero = document.getElementById("numero");
+
     for (var i = 1; i <= 10; i++) {
-      sel.innerHTML += '<option>' + i + '</option>';
+      numero.innerHTML += "<option>" + i + "</option>";
     }
   }
 
-  // Mostrar tabuada
   function mostrarTabuada() {
-    var n = parseInt(document.getElementById('numero').value);
-    var lista = document.getElementById('lista');
-    lista.innerHTML = '';
-    for (var i = 1; i <= ate[nivel]; i++) {
-      lista.innerHTML += '<li>' + n + ' × ' + i + ' = ' + (n*i) + '</li>';
+    var numero = document.getElementById("numero").value;
+    var lista = document.getElementById("lista");
+    var limite = 5;
+
+    if (nivel == "medio") {
+      limite = 10;
+    }
+
+    if (nivel == "dificil") {
+      limite = 12;
+    }
+
+    lista.innerHTML = "";
+
+    for (var i = 1; i <= limite; i++) {
+      lista.innerHTML += "<li>" + numero + " x " + i + " = " + (numero * i) + "</li>";
     }
   }
 
-  // Mostrar palavras
   function mostrarPalavras() {
-    var lista = document.getElementById('palavras');
-    lista.innerHTML = '';
-    var lista_palavras = palavras[nivel];
-    for (var i = 0; i < lista_palavras.length; i++) {
-      var p = lista_palavras[i];
+    var lista = document.getElementById("palavras");
+    var palavras = palavrasFacil;
+
+    if (nivel == "medio") {
+      palavras = palavrasMedio;
+    }
+
+    if (nivel == "dificil") {
+      palavras = palavrasDificil;
+    }
+
+    lista.innerHTML = "";
+
+    for (var i = 0; i < palavras.length; i++) {
       lista.innerHTML +=
-        '<li>' +
-          '<div class="foto-palavra">' + p[1] + '</div>' +
-          '<strong>' + p[0] + '</strong>' +
-        '</li>';
+        "<li>" +
+        "<div class='emoji'>" + palavras[i][1] + "</div>" +
+        "<strong>" + palavras[i][0] + "</strong>" +
+        "</li>";
     }
   }
 
-  // Começar
-  preencherSelect();
+  colocarNumeros();
   mostrarTabuada();
   mostrarPalavras();
 </script>
